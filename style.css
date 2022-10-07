@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html {
+    font-size: 62.5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: 0.8rem;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar li a:hover {
+    background-color: gray;
+}
+
+.toggle-button {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 1.2rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 1.5rem;
+    justify-content: space-between;
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.1rem;
+}
+
+@media (max-width: 500px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        width: 100%;
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        padding: 0.7rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
